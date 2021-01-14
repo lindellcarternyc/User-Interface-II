@@ -70,11 +70,21 @@ textarea{
     font:inherit;
 }
 
+body {
+  width: 100%;
+  height: 100vh;
+}
+
 header {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+}
+
+header h3 {
+  font-size: 2rem;
 }
 
 nav ul {
@@ -87,20 +97,26 @@ nav ul li a {
 
 header nav ul {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  /* align-content: space-around; */
 }
 
 header nav ul li {
   padding: 0.25rem 0.5rem;
   border: 2px solid black;
+  margin-bottom: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 header nav ul li.active,
 header nav ul li:hover {
   background-color: black;
   color: white;
+}
 
-  transition: background-color 0.3s ease-in,
-              color 0.3s ease-in;
+header nav ul li:hover {
+  transition: all .3s ease-in;
 }
 
 .hero-image {
@@ -108,7 +124,7 @@ header nav ul li:hover {
   background-repeat: no-repeat;
   background-size: cover;
   height: 300px;
-  width: 500px;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -135,16 +151,93 @@ header nav ul li:hover {
   width: 90px;
   margin: 1rem auto 0;
   padding: 0.25rem 0.5rem;
-
-  transition: all 0.3s ease-in;
 }
 
 .hero-image-text a:hover {
   color: black;
   background: white;
+  transition: all 0.3s ease-in;
+}
+
+.hero {
+  width: 100%;
 }
 
 .hero > p {
-  width: 85%;
+  width: 90%;
   margin: 1rem auto;
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 90%;
+  margin: 1rem auto;
+}
+
+.project {
+  margin: 1rem 0;
+  width: 300px;
+  height: 200px;
+  background-image: url("https://picsum.photos/300/200");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.project > h6 {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 100%;
+  transition: all 0.4s ease-in-out;
+}
+
+.project:hover > h6 {
+  top: 0;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer > a {
+  background-color: white;
+  color: black;
+  padding: 0.25rem 0.5rem;
+  margin-bottom: 1rem;
+  border: 2px solid white;
+}
+
+footer > a:hover {
+  background-color: black;
+  color: white;
+  transition: all 0.3s ease-in;
+}
+
+footer > nav {
+  width: 100%;
+  max-width: 400px;
+}
+
+footer > nav > ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer nav a:hover {
+  text-decoration: underline;
 }
