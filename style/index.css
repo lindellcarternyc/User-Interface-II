@@ -68,3 +68,36 @@ select,
 textarea{
     font:inherit;
 }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li a {
+  color: inherit
+}
+
+header nav ul {
+  display: flex;
+}
+
+header nav ul li {
+  padding: 0.25rem 0.5rem;
+  border: 2px solid black;
+}
+
+header nav ul li.active,
+header nav ul li:hover {
+  background-color: black;
+  color: white;
+
+  transition: background-color 0.3s ease-in,
+              color 0.3s ease-in;
+}
