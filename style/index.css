@@ -228,9 +228,21 @@ footer > a:hover {
   transition: all 0.3s ease-in;
 }
 
-footer > nav {
+footer > nav, .social-profiles {
   width: 100%;
   max-width: 400px;
+}
+
+.social-profiles {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+.social-profiles a:hover {
+  text-decoration: underline;
+  transition: all 0.3s ease-in;
 }
 
 footer > nav > ul {
