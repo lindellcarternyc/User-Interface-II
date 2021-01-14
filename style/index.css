@@ -49,6 +49,7 @@ ins{
 }
 a,u,ins{
     text-decoration:none;
+    color: inherit;
 }
 del,s{
     text-decoration:line-through;
@@ -100,4 +101,50 @@ header nav ul li:hover {
 
   transition: background-color 0.3s ease-in,
               color 0.3s ease-in;
+}
+
+.hero-image {
+  background-image: url("https://picsum.photos/500/400");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  width: 500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image h1 {
+  font-size: 3rem;
+  cursor: default;
+}
+
+.hero-image-text {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  padding: 2rem 1rem;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+}
+
+.hero-image-text a {
+  color: inherit;
+  border: 1px solid white;
+  width: 90px;
+  margin: 1rem auto 0;
+  padding: 0.25rem 0.5rem;
+
+  transition: all 0.3s ease-in;
+}
+
+.hero-image-text a:hover {
+  color: black;
+  background: white;
+}
+
+.hero > p {
+  width: 85%;
+  margin: 1rem auto;
 }
